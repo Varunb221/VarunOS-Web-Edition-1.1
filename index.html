@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<title>VarunOS — Web Edition 1.1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="desktop" data-wall="aurora">
+  <header class="topbar">
+    <div class="brand"><span class="logo">V</span><span>VARUNOS</span></div>
+    <div class="sysinfo"><span><i class="dot" style="display:inline-block"></i> SYSTEM ONLINE</span><span id="netStatus">LOCAL WEB SESSION</span></div>
+    <div class="topright"><button class="ghost" data-open="settings" title="Settings">⚙</button><button class="ghost" id="hideAll" title="Minimize all">—</button></div>
+  </header>
+  <section class="hero"><div class="eyebrow">PERSONAL WEB OPERATING SYSTEM</div><h1>Welcome back.</h1><p>Your space to create, explore, and launch.</p></section>
+  <nav class="icons" aria-label="Desktop applications">
+    <button class="deskicon" data-open="projects"><span class="glyph">▦</span>Projects</button>
+    <button class="deskicon" data-open="notes"><span class="glyph g-purple">✎</span>Notes</button>
+    <button class="deskicon" data-open="mission"><span class="glyph g-cyan">🚀</span>Mission Control</button>
+    <button class="deskicon" data-open="web"><span class="glyph g-orange">↗</span>Web Launcher</button>
+    <button class="deskicon" data-open="calculator"><span class="glyph g-green">＋</span>Calculator</button>
+    <button class="deskicon" data-open="terminal"><span class="glyph g-pink">⌘</span>Terminal</button>
+    <button class="deskicon" data-open="settings"><span class="glyph g-gray">⚙</span>Settings</button>
+    <button class="deskicon" data-open="about"><span class="glyph">ⓘ</span>About</button>
+  </nav>
+  <section class="card"><div class="eyebrow">YOUR DESKTOP</div><h2>A small universe, built by you.</h2><p>Open apps from the desktop or Start menu. Move windows around, save notes in this browser, customize the wallpaper, and try the Mission Control launch simulator.</p><button class="primary" data-open="mission">Launch Mission Control ↗</button></section>
+  <div class="window-layer" id="windowLayer"></div>
+  <div class="startmenu hidden" id="startMenu">
+    <div class="starthead"><span class="logo">V</span><div><strong>VarunOS</strong><small>Web Desktop · Local-first</small></div></div>
+    <label class="start-search-label" for="appSearch">Find an app</label><input class="field start-search" id="appSearch" type="search" placeholder="Search apps…" autocomplete="off"><div class="startgrid" id="startGrid">
+      <button data-open="projects">▦ Projects</button><button data-open="notes">✎ Notes</button>
+      <button data-open="mission">🚀 Mission Control</button><button data-open="web">↗ Web Launcher</button>
+      <button data-open="calculator">＋ Calculator</button><button data-open="terminal">⌘ Terminal</button>
+      <button data-open="settings">⚙ Settings</button><button data-open="about">ⓘ About</button>
+    </div>
+  </div>
+  <footer class="taskbar"><button class="startbtn" id="startButton"><span class="logo small-logo">V</span> Start</button><div class="taskitems" id="taskItems"></div><div class="clock"><span id="clock">--:--</span><small id="date">Loading…</small></div></footer>
+  <div class="toast hidden" id="toast" role="status"></div>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
